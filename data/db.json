@@ -1,0 +1,108 @@
+{
+    "categories": [
+      { "id": 1, "name": "Tecnologia" },
+      { "id": 2, "name": "Esportes" },
+      { "id": 3, "name": "Entretenimento" },
+      { "id": 4, "name": "Politica" },
+      { "id": 5, "name": "Saude" }
+    ],
+    "articles": [
+      {
+        "id": 1,
+        "title": "As novidades do React 18",
+        "content": "React 18 trouxe melhorias de performance e novos recursos como o Concurrent Rendering.",
+        "categoryId": 1,
+        "authorId": 1,
+        "date": "2024-12-01",
+        "image": "https://via.placeholder.com/600x400?text=React+18"
+      },
+      {
+        "id": 2,
+        "title": "Copa do Mundo de Futebol 2026: O que esperar",
+        "content": "O maior evento de futebol mundial acontecerá na América do Norte com novos formatos e expectativas.",
+        "categoryId": 2,
+        "authorId": 2,
+        "date": "2024-11-30",
+        "image": "https://via.placeholder.com/600x400?text=Copa+2026"
+      },
+      {
+        "id": 3,
+        "title": "Os filmes mais esperados de 2024",
+        "content": "Com muitas produções em alta, 2024 promete ser um ano incrível para os amantes de cinema.",
+        "categoryId": 3,
+        "authorId": 3,
+        "date": "2024-11-25",
+        "image": "https://via.placeholder.com/600x400?text=Filmes+2024"
+      },
+      {
+        "id": 4,
+        "title": "Reforma Tributária no Brasil: Entenda as mudanças",
+        "content": "A proposta de reforma tributária pretende simplificar os impostos e mudar as dinâmicas de arrecadação.",
+        "categoryId": 4,
+        "authorId": 4,
+        "date": "2024-11-20",
+        "image": "https://via.placeholder.com/600x400?text=Reforma+Tributária"
+      },
+      {
+        "id": 5,
+        "title": "A inteligência artificial no cotidiano",
+        "content": "Descubra como a IA está sendo utilizada para resolver problemas e criar inovações no dia a dia.",
+        "categoryId": 1,
+        "authorId": 2,
+        "date": "2024-11-18",
+        "image": "https://via.placeholder.com/600x400?text=IA+Cotidiano"
+      },
+      {
+        "id": 6,
+        "title": "O impacto do 5G no Brasil",
+        "content": "Com a chegada do 5G, espera-se avanços na conectividade, velocidade e no desenvolvimento de cidades inteligentes.",
+        "categoryId": 1,
+        "authorId": 1,
+        "date": "2024-11-15",
+        "image": "https://via.placeholder.com/600x400?text=5G+Brasil"
+      },
+      {
+        "id": 7,
+        "title": "Os segredos do treino funcional",
+        "content": "Como o treino funcional pode melhorar sua performance física e prevenir lesões.",
+        "categoryId": 5,
+        "authorId": 3,
+        "date": "2024-11-10",
+        "image": "https://via.placeholder.com/600x400?text=Treino+Funcional"
+      },
+      {
+        "id": 8,
+        "title": "Streaming e o futuro da TV",
+        "content": "Plataformas de streaming estão transformando a forma como consumimos entretenimento.",
+        "categoryId": 3,
+        "authorId": 4,
+        "date": "2024-11-08",
+        "image": "https://via.placeholder.com/600x400?text=Streaming+TV"
+      },
+      {
+        "id": 9,
+        "title": "Eleições 2026: Um panorama político",
+        "content": "Quais são os principais desafios e expectativas para as eleições no Brasil em 2026.",
+        "categoryId": 4,
+        "authorId": 2,
+        "date": "2024-11-05",
+        "image": "https://via.placeholder.com/600x400?text=Eleições+2026"
+      },
+      {
+        "id": 10,
+        "title": "Meditação e saúde mental",
+        "content": "Práticas de meditação são cada vez mais recomendadas para melhorar a qualidade de vida.",
+        "categoryId": 5,
+        "authorId": 1,
+        "date": "2024-11-01",
+        "image": "https://via.placeholder.com/600x400?text=Meditação+Saúde"
+      }
+    ],
+    "authors": [
+      { "id": 1, "name": "Maria Silva", "avatar": "https://via.placeholder.com/150?text=MS" },
+      { "id": 2, "name": "João Pereira", "avatar": "https://via.placeholder.com/150?text=JP" },
+      { "id": 3, "name": "Ana Souza", "avatar": "https://via.placeholder.com/150?text=AS" },
+      { "id": 4, "name": "Carlos Oliveira", "avatar": "https://via.placeholder.com/150?text=CO" }
+    ]
+  }
+  
