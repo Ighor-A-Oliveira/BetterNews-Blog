@@ -1,6 +1,7 @@
 import { useMotionValueEvent, useScroll, motion } from 'framer-motion'; 
 import { useState } from 'react';
 import { useGeneral } from '../Contexts/GeneralContext';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const { state } = useGeneral();
@@ -40,7 +41,7 @@ export default function Navbar() {
               onMouseEnter={() => setOpenCategory(category.id)}  // Set hovered category's id
               onMouseLeave={() => setOpenCategory(null)}  // Reset when mouse leaves
             >
-              <h1 className='cursor-pointer'>{category.name}</h1>
+              <Link to={category.name} className='cursor-pointer'>{category.name}</Link>
               <span
                 style={{
                   transform: isOpen ? "scaleX(1)" : "scaleX(0)",  // Apply hover effect based on hover state

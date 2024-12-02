@@ -12,3 +12,6 @@ Currently, two official plugins are available:
 NavBar mostly finished
 Need to work on home page and footer
 Also, need to setup dark mode
+
+
+Have to study how to properly get data from the API, cant load all data at once on to the state

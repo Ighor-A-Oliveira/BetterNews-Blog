@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
 
-export default function CategoryPage({title}) {
+export default function CategoryPage() {
   return (
-    <div>{title}</div>
+    <div>
+
+    </div>
   )
 }

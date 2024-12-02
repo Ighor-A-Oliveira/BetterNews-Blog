@@ -13,7 +13,7 @@ export function  useFetch(url){
           axios.get(url) // Make sure the URL is correct
             /* fires a function onde the promise has been answered */
             .then((response) => {
-              console.log(response.data)
+              //console.log(response.data)
               setData(response.data);
               setLoading(false); // Set loading to false after data is fetched
           })

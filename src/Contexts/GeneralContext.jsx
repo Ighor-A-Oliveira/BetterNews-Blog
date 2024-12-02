@@ -12,7 +12,8 @@ export default function GeneralProvider({children}) {
     //this is the states we have available
     const [state, dispatch] = useReducer(GeneralReducer, {
         darkMode: false,
-        categories: []
+        categories: [],
+        articles: [],
     })
 
     //const value = {}

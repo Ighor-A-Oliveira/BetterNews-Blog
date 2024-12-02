@@ -8,7 +8,9 @@ export default function HomeLayout() {
     <div className="h-[2000px] bg-neutral-500 relative w-full">
         <Logo/>
         <Navbar/>
-        <Outlet/>
+        <div className="w-full lg:w-[80%] bg-white mx-auto h-screen">
+          <Outlet/>
+        </div>
     </div>
   )
 }

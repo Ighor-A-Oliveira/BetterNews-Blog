@@ -1,27 +1,45 @@
-import { Route, Routes } from "react-router-dom"
-import HomeLayout from "./Pages/HomeLayout"
-import { useFetch } from "./Utils/useFetch"
-import CategoryPage from "./Pages/CategoryPage"
+/* eslint-disable no-unused-vars */
+import { Route, Routes } from "react-router-dom";
+import HomeLayout from "./Pages/HomeLayout";
+import { useFetch } from "./Utils/useFetch";
+import CategoryPage from "./Pages/CategoryPage";
 import { useGeneral } from "./Contexts/GeneralContext";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import HomePage from "./Pages/HomePage";
+import ArticlesPage from "./Pages/ArticlesPage";
 
 function AppRoutes() {
+  const { data: categories = [] } = useFetch("http://localhost:3001/categories");
+  const { data: articles = [] } = useFetch("http://localhost:3001/articles"); // Pega todos os artigos
+  const [totalArticles, setTotalArticles] = useState(0);
+  setTotalArticles(articles.length)
 
-  const { data: categories = [], } = useFetch("http://localhost:5000/categories");
+  const { state, dispatch } = useGeneral();
 
-  const { dispatch } = useGeneral();
+  
+  const articlesPerPage = 10; // número de artigos por página
 
-  // Only dispatch after categories are fetched
+  // Carregar categorias no estado
   useEffect(() => {
     if (categories && categories.length > 0) {
       dispatch({ type: "LOAD_CATEGORY", payload: categories });
     }
+
+
+    //console.log("Artigos:", articles); // Verificar o conteúdo dos artigos
   }, [categories, dispatch]);
 
-  console.log(categories)
+  // Calculando o número total de páginas
+  const totalPages = Math.ceil(totalArticles / articlesPerPage);
+
+  console.log("Total de artigos:", totalArticles); // Verificando o total de artigos
+
   return (
     <Routes>
-      <Route path="/" element={<HomeLayout />}>
+      <Route element={<HomeLayout />}>
+        <Route path="/" element={<HomePage />} />
+
+        {/* Roteamento das categorias */}
         {categories.map((category) => (
           <Route
             key={category.id}
@@ -29,11 +47,21 @@ function AppRoutes() {
             element={<CategoryPage title={category.name} />}
           />
         ))}
-        <Route path="*" element={<p>Pagina Não Encontrada</p>}></Route>
+
+        {/* Roteamento das páginas de artigos com base no número total de artigos */}
+        {Array.from({ length: totalPages }, (_, index) => (
+          <Route
+            key={index}
+            path={`/artigo/pag/${index + 1}`}
+            element={<ArticlesPage page={index + 1} />}
+          />
+        ))}
+
+        {/* Rota de "Página Não Encontrada" */}
+        <Route path="/*" element={<p>Pagina Não Encontrada</p>} />
       </Route>
     </Routes>
-
-  )
+  );
 }
 
-export default AppRoutes
+export default AppRoutes;
