@@ -8,6 +8,7 @@ export function  useFetch(url){
     const [error, setError] = useState(""); // Error state
 
     useEffect(() => {
+        if (!url) return;
         /* setTimeout(() => { */
           /* Axios parses the data to json by default */
           axios.get(url) // Make sure the URL is correct

@@ -1,9 +1,44 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 
-export default function CategoryPage() {
+import { useGeneral } from "../Contexts/GeneralContext";
+import { useFetch } from "../Utils/useFetch";
+
+export default function CategoryPage({ title }) {
+  const { state } = useGeneral();
+
+  // Get category data based on the title
+  const categoryId = state.categories.filter((category) => category.name === title);
+  const categoryData = categoryId[0]; // Assuming categoryId[0] exists and is valid
+  
+  // Check if categoryData is valid before making the API call
+  if (!categoryData) {
+    return <p>Page not found</p>; // Display a message if no category is found
+  }
+
+  console.log(categoryData);
+
+  // Fetch articles based on category ID
+  const { data: articles = [], loading: isLoadingArticles, errorArticles } = useFetch(
+    `http://localhost:3001/articles?categoryId=${categoryData.id}`
+  );
+  
+  console.log(articles);
+
   return (
     <div>
-
+      {
+      isLoadingArticles ? (
+        <p>Loading...</p> // Add loading state
+      ) : errorArticles ? (
+        <p>Error loading articles</p> // Error handling
+      ) : (
+        articles.map((article, index) => {
+          return <p key={index}>{article.title}</p>; // Return the article title
+        })
+      )}
+      {/* preciso fazer os cards das noticias */}
     </div>
-  )
+  );
 }
