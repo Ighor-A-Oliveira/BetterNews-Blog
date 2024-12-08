@@ -18,7 +18,7 @@ export default function HomePage() {
   }
     
   return (
-    <div className="w-[50%] flex flex-col justify-start items-center pt-8 px-16">
+    <div className="w-[50%] flex flex-col justify-start items-center pt-8">
         <p className="text-4xl font-sans">Ultimas Noticias</p>
         <div className="w-full">
           {articles.map((article) => (
