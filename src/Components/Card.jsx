@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Card({article}) {
 
   return (
-    <div  className="relative z-10 w-[70%] mx-auto h-[350px] p-1 my-4 bg-cover bg-center rounded-lg transition-shadow duration-300 cursor-pointer"
+    <div  className="relative z-10 w-[80%] mx-auto h-[350px] p-1 my-4 bg-cover bg-center rounded-lg transition-shadow duration-300 cursor-pointer"
     style={{ backgroundImage: `url(${article.image})` }}
     >
       <Link to={`artigo/${article.id}`}>
