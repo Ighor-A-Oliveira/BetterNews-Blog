@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className="sticky top-0 flex w-full items-center justify-center flex-col p-6 bg-black"
+      className="sticky top-0 flex w-full items-center justify-center flex-col p-6 bg-black z-40"
       variants={{
         visible: { y: 0 },
         hidden: { y: "-100%" },

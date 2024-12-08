@@ -14,7 +14,7 @@
         "categoryId": 1,
         "authorId": 1,
         "date": "2024-12-01",
-        "image": "https://via.placeholder.com/600x400?text=React+18"
+        "image": "https://www.hover.dev/imgs/abstract/1.jpg"
       },
       {
         "id": 2,
@@ -23,7 +23,7 @@
         "categoryId": 2,
         "authorId": 2,
         "date": "2024-11-30",
-        "image": "https://via.placeholder.com/600x400?text=Copa+2026"
+        "image": "https://www.hover.dev/imgs/abstract/2.jpg"
       },
       {
         "id": 3,
@@ -32,7 +32,7 @@
         "categoryId": 3,
         "authorId": 3,
         "date": "2024-11-25",
-        "image": "https://via.placeholder.com/600x400?text=Filmes+2024"
+        "image": "https://www.hover.dev/imgs/abstract/3.jpg"
       },
       {
         "id": 4,
@@ -41,7 +41,7 @@
         "categoryId": 4,
         "authorId": 4,
         "date": "2024-11-20",
-        "image": "https://via.placeholder.com/600x400?text=Reforma+Tributária"
+        "image": "https://www.hover.dev/imgs/abstract/4.jpg"
       },
       {
         "id": 5,
@@ -50,7 +50,7 @@
         "categoryId": 1,
         "authorId": 2,
         "date": "2024-11-18",
-        "image": "https://via.placeholder.com/600x400?text=IA+Cotidiano"
+        "image": "https://www.hover.dev/imgs/abstract/5.jpg"
       },
       {
         "id": 6,
@@ -59,7 +59,7 @@
         "categoryId": 1,
         "authorId": 1,
         "date": "2024-11-15",
-        "image": "https://via.placeholder.com/600x400?text=5G+Brasil"
+        "image": "https://www.hover.dev/imgs/abstract/6.jpg"
       },
       {
         "id": 7,
@@ -68,7 +68,7 @@
         "categoryId": 5,
         "authorId": 3,
         "date": "2024-11-10",
-        "image": "https://via.placeholder.com/600x400?text=Treino+Funcional"
+        "image": "https://www.hover.dev/imgs/abstract/7.jpg"
       },
       {
         "id": 8,
@@ -77,7 +77,7 @@
         "categoryId": 3,
         "authorId": 4,
         "date": "2024-11-08",
-        "image": "https://via.placeholder.com/600x400?text=Streaming+TV"
+        "image": "https://www.hover.dev/imgs/abstract/1.jpg"
       },
       {
         "id": 9,
@@ -86,7 +86,7 @@
         "categoryId": 4,
         "authorId": 2,
         "date": "2024-11-05",
-        "image": "https://via.placeholder.com/600x400?text=Eleições+2026"
+        "image": "https://www.hover.dev/imgs/abstract/2.jpg"
       },
       {
         "id": 10,
@@ -95,7 +95,7 @@
         "categoryId": 5,
         "authorId": 1,
         "date": "2024-11-01",
-        "image": "https://via.placeholder.com/600x400?text=Meditação+Saúde"
+        "image": "https://www.hover.dev/imgs/abstract/3.jpg"
       },
       {
         "id": 11,
@@ -104,7 +104,7 @@
         "categoryId": 5,
         "authorId": 1,
         "date": "2024-11-01",
-        "image": "https://via.placeholder.com/600x400?text=Meditação+Saúde"
+        "image": "https://www.hover.dev/imgs/abstract/4.jpg"
       },
       {
         "id": 12,
@@ -113,7 +113,7 @@
         "categoryId": 5,
         "authorId": 1,
         "date": "2024-11-01",
-        "image": "https://via.placeholder.com/600x400?text=Meditação+Saúde"
+        "image": "https://www.hover.dev/imgs/abstract/5.jpg"
       },
       {
         "id": 13,
@@ -122,7 +122,7 @@
         "categoryId": 5,
         "authorId": 1,
         "date": "2024-11-01",
-        "image": "https://via.placeholder.com/600x400?text=Meditação+Saúde"
+        "image": "https://www.hover.dev/imgs/abstract/6.jpg"
       },
       {
         "id": 14,
@@ -131,7 +131,7 @@
         "categoryId": 5,
         "authorId": 1,
         "date": "2024-11-01",
-        "image": "https://via.placeholder.com/600x400?text=Meditação+Saúde"
+        "image": "https://www.hover.dev/imgs/abstract/7.jpg"
       },
       {
         "id": 15,
@@ -140,7 +140,7 @@
         "categoryId": 5,
         "authorId": 1,
         "date": "2024-11-01",
-        "image": "https://via.placeholder.com/600x400?text=Meditação+Saúde"
+        "image": "https://www.hover.dev/imgs/abstract/1.jpg"
       },
       {
         "id": 16,
@@ -149,7 +149,7 @@
         "categoryId": 5,
         "authorId": 1,
         "date": "2024-11-01",
-        "image": "https://via.placeholder.com/600x400?text=Meditação+Saúde"
+        "image": "https://www.hover.dev/imgs/abstract/2.jpg"
       },
       {
         "id": 17,
@@ -158,7 +158,7 @@
         "categoryId": 5,
         "authorId": 1,
         "date": "2024-11-01",
-        "image": "https://via.placeholder.com/600x400?text=Meditação+Saúde"
+        "image": "https://www.hover.dev/imgs/abstract/3.jpg"
       },
       {
         "id": 18,
@@ -167,7 +167,7 @@
         "categoryId": 5,
         "authorId": 1,
         "date": "2024-11-01",
-        "image": "https://via.placeholder.com/600x400?text=Meditação+Saúde"
+        "image": "https://www.hover.dev/imgs/abstract/4.jpg"
       },
       {
         "id": 19,
@@ -176,7 +176,7 @@
         "categoryId": 5,
         "authorId": 1,
         "date": "2024-11-01",
-        "image": "https://via.placeholder.com/600x400?text=Meditação+Saúde"
+        "image": "https://www.hover.dev/imgs/abstract/5.jpg"
       },
       {
         "id": 20,
@@ -185,7 +185,7 @@
         "categoryId": 5,
         "authorId": 1,
         "date": "2024-11-01",
-        "image": "https://via.placeholder.com/600x400?text=Meditação+Saúde"
+        "image": "https://www.hover.dev/imgs/abstract/6.jpg"
       }
     ],
     "authors": [

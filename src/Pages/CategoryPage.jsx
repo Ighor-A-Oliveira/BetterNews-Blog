@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 
+import Card from "../Components/Card";
 import { useGeneral } from "../Contexts/GeneralContext";
 import { useFetch } from "../Utils/useFetch";
 
@@ -27,7 +28,7 @@ export default function CategoryPage({ title }) {
   console.log(articles);
 
   return (
-    <div>
+    <div className="w-[50%] mx-auto min-h-screen">
       {
       isLoadingArticles ? (
         <p>Loading...</p> // Add loading state
@@ -35,7 +36,7 @@ export default function CategoryPage({ title }) {
         <p>Error loading articles</p> // Error handling
       ) : (
         articles.map((article, index) => {
-          return <p key={index}>{article.title}</p>; // Return the article title
+          return <Card key={article.id} article={article}/> // Return the article title
         })
       )}
       {/* preciso fazer os cards das noticias */}
