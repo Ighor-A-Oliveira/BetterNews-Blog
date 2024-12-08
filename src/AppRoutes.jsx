@@ -29,17 +29,26 @@ function AppRoutes() {
 
         {/* Roteamento das categorias */}
         {categories.map((category) => (
+          <>
           <Route
             key={category.id}
             path={category.name.toLowerCase()}
             element={<CategoryPage title={category.name} />}
+            
           />
+          <Route
+            path={`${category.name.toLowerCase()}/artigo/:id`}
+            element={<ArticlePage />}
+          />
+          </>
         ))}
 
           <Route
             path={`/artigo/:id`}
             element={<ArticlePage />}
           />
+
+          
 
         {/* Rota de "Página Não Encontrada" */}
         <Route path="/*" element={<p>Pagina Não Encontrada</p>} />
