@@ -9,7 +9,6 @@ export default function ArticlePage() {
   const { data: articles = [], isLoading: isArticleLoading, error: articleError } = useFetch(`http://localhost:3001/articles/?id=${id}`);
   // Safely retrieve the article
   const article = articles.length > 0 ? articles[0] : null;
-  console.log(article)
 
   const { data: author = [], isLoading: isAuthorLoading, error: authorError } = useFetch(
     article ? `http://localhost:3001/authors?id=${article.authorId}` : null
@@ -17,9 +16,6 @@ export default function ArticlePage() {
 
   const authorData = author.length > 0 ? author[0] : {name: 'BetterNews'};
 
-  
-
-  console.log(authorData)
 
   /* unificando o loading state */
   const isLoading = isAuthorLoading || isArticleLoading
@@ -44,12 +40,12 @@ export default function ArticlePage() {
   const formattedDate = date.toLocaleDateString("pt-BR");
 
   return (
-    <div className="w-[50%] flex flex-col font-sans py-4">
-      <p className="text-6xl">{article.title}</p>
+    <div className="w-full md:w-[80%] lg:w-[65%] flex flex-col font-sans py-4 px-4 md:px-0">
+      <p className="text-4xl md:text-6xl">{article.title}</p>
       <p className="text-md text-left mt-4">por <span className="font-bold">{authorData.name}</span> em {formattedDate}</p>
       <p className="text-xl my-4">{article.content}</p>
-      <img className="rounded-md my-4 w-full h-[500px] object-cover bg-center p-4" src={article.image} alt="" />
-      <div className="mt-8 text-xl">
+      <img className="rounded-md w-full h-[250px] md:h-[300px] lg:h-[500px] my-4 object-cover bg-center" src={article.image} alt="" />
+      <div className="mt-4 text-xl">
         {/* Place holder text for an article */}
         <article className="">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis repudiandae magni voluptatem corrupti aspernatur. Nihil dolorum sed amet, ducimus vel asperiores ipsa et natus id, ad laborum dicta! Nemo, laudantium.

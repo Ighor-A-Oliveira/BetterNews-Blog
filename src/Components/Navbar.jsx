@@ -21,13 +21,13 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className="sticky top-0 flex w-full items-center justify-center flex-col p-6 bg-black z-40"
+      className="sticky top-0 lg:flex w-full items-center justify-center flex-col p-6 bg-black z-40 hidden"
       variants={{
         visible: { y: 0 },
         hidden: { y: "-100%" },
       }}
       animate={hidden ? "hidden" : "visible"}
-      transition={{ duration: 0.35, ease: "easeInOut" }}
+      transition={{ duration: 0.35, ease: "backOut" }}
     >
       {/* Menu items */}
       <div className="relative flex w-[75%] justify-around items-center gap-2 text-white text-3xl">
@@ -41,7 +41,7 @@ export default function Navbar() {
               onMouseEnter={() => setOpenCategory(category.id)}  // Set hovered category's id
               onMouseLeave={() => setOpenCategory(null)}  // Reset when mouse leaves
             >
-              <Link to={category.name} className='cursor-pointer'>{category.name}</Link>
+              <Link to={category.name.toLowerCase()} className='cursor-pointer'>{category.name}</Link>
               <span
                 style={{
                   transform: isOpen ? "scaleX(1)" : "scaleX(0)",  // Apply hover effect based on hover state
@@ -52,7 +52,6 @@ export default function Navbar() {
           );
         })}
       </div>
-      <button className="relative scale-100 overflow-hidden rounded-lg bg-emerald-400"></button>
     </motion.nav>
   );
 }

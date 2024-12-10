@@ -18,15 +18,15 @@ export default function HomePage() {
   }
     
   return (
-    <div className="w-[50%] flex flex-col justify-start items-center pt-8">
+    <div className="w-full md:w-[80%] lg:w-[60%] flex flex-col justify-start items-center pt-8">
         <p className="text-4xl font-sans">Ultimas Noticias</p>
-        <div className="w-full">
+        <div className="w-full flex flex-row flex-wrap">
           {articles.map((article) => (
             <Card key={article.id} article={article}/>
           ))}
         </div>
 
-        <div className="bg-stone-950 text-white w-full p-4 text-center my-4 cursor-pointer hover:bg-stone-950/70" onClick={() => {setPageNumber(pageNumber+1)}}>
+        <div className="bg-stone-950 text-white w-[80%] lg:w-[95%] p-4 text-center my-4 cursor-pointer hover:bg-stone-950/70" onClick={() => {setPageNumber(pageNumber+1)}}>
           Ver Mais Artigos
         </div>
     </div>

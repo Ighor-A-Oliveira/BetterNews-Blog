@@ -28,7 +28,7 @@ function AppRoutes() {
         <Route path="/" element={<HomePage />} />
 
         {/* Roteamento das categorias */}
-        {categories.map((category) => (
+        {categories.map((category, index) => (
           <>
           <Route
             key={category.id}
@@ -37,6 +37,7 @@ function AppRoutes() {
             
           />
           <Route
+            key={index}
             path={`${category.name.toLowerCase()}/artigo/:id`}
             element={<ArticlePage />}
           />
