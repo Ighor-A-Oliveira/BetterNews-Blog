@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className="sticky top-0 lg:flex w-full items-center justify-center flex-col p-6 bg-black z-40 hidden"
+      className="sticky top-0 hidden lg:flex w-full items-center justify-center flex-col p-6 bg-black z-40 "
       variants={{
         visible: { y: 0 },
         hidden: { y: "-100%" },
@@ -30,7 +30,7 @@ export default function Navbar() {
       transition={{ duration: 0.35, ease: "backOut" }}
     >
       {/* Menu items */}
-      <div className="relative flex w-[75%] justify-around items-center gap-2 text-white text-3xl">
+      <div className="relative hidden lg:flex w-[75%] justify-around items-center gap-2 text-white text-3xl">
         {Array.isArray(categories) && categories.map((category) => {
           const isOpen = openCategory === category.id; // Check if this category is being hovered
 

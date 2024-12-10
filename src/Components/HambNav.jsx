@@ -1,18 +1,41 @@
 import { MotionConfig, motion } from "framer-motion"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { Link } from "react-router-dom";
+import { useGeneral } from "../Contexts/GeneralContext";
 
 
 export default function HambNav() {
     const [active, setActive] = useState(false)
     const isHambActive = active ? 'h-[100vh] p-4' : 'h-[0px] p-0'
+    const { state } = useGeneral();
+    const categories = state.categories || [];
+    console.log(categories)
+
+    // Disable scrolling on body when menu is active
+    useEffect(() => {
+        if (active) {
+            document.body.style.overflow = 'hidden'; // Disable scrolling
+        } else {
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+
+        // Cleanup function to re-enable scrolling if the component unmounts
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
+    }, [active]);
 
   return (
     <>
         <AnimatedHamburguerButton active={active} setActive={setActive}/>
-        <div className={`sticky lg:hidden flex top-[0px] w-full z-50 bg-red-400  transition-all duration-300 ease-out ${isHambActive}`}
-            
-        >
-            a
+        <div className={`absolute lg:hidden top-[85px] left-0 right-0 w-full h-full z-50 bg-red-400 transition-all duration-300 ease-out ${isHambActive}`}>
+            {active && (
+                <div className="flex flex-col h-full w-full">
+                    {Array.isArray(categories) && categories.map((category, index) => {
+                        return(<Link to={category.name.toLowerCase()} className='mb-2 text=white' key={index} onClick={() => setActive(!active)}>{category.name}</Link>)
+                    })}
+                </div>
+            )}
         </div>
     </>
   )

@@ -31,19 +31,24 @@ export default function CategoryPage({ title }) {
   console.log(articles);
 
   return (
-    <div className="w-full md:w-[80%] lg:w-[60%] mx-auto min-h-screen flex flex-row flex-wrap">
-      {
-      isLoadingArticles ? (
-        <p>Loading...</p> // Add loading state  
-      ) : errorArticles ? (
-        <p>Error loading articles</p> // Error handling
-      ) : (
-        articles.map((article) => {
-          return <Card key={article.id} article={article}/> // Return the article title
-        })
-      )}
-      {/* preciso fazer os cards das noticias */}
+    <div className='flex flex-col items-center w-full md:w-[80%] lg:w-[60%]'>
+      <p className='text-4xl font-sans text-center mb-4'>{categoryData.name}</p>
+      <div className="w-full mx-auto min-h-screen flex flex-row flex-wrap">
+        
+        {
+        isLoadingArticles ? (
+          <p>Loading...</p> // Add loading state  
+        ) : errorArticles ? (
+          <p>Error loading articles</p> // Error handling
+        ) : (
+          articles.map((article) => {
+            return <Card key={article.id} article={article}/> // Return the article title
+          })
+        )}
+        {/* preciso fazer os cards das noticias */}
+      </div>
     </div>
+    
   );
 }
 

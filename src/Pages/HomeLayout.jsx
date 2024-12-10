@@ -2,7 +2,6 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import Logo from "../Components/Logo";
 import Footer from "../Components/Footer";
-import HambNav from "../Components/HambNav";
 
 
 export default function HomeLayout() {
