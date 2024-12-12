@@ -11,9 +11,6 @@ export default function CategoryPage({ title }) {
   const categoryId = state.categories.filter((category) => category.name === title);
   const categoryData = categoryId[0]; // Assuming categoryId[0] exists and is valid
 
- 
-
-
   // Check if categoryData is valid before making the API call
   if (!categoryData) {
     return <p>Page not found</p>; // Display a message if no category is found
@@ -31,9 +28,9 @@ export default function CategoryPage({ title }) {
   console.log(articles);
 
   return (
-    <div className='flex flex-col items-center w-full md:w-[80%] lg:w-[60%] pt-20 lg:pt-0'>
+    <div className="w-full md:w-[80%] lg:w-[60%] flex flex-col justify-start items-center pt-20 lg:pt-4">
       <p className='text-4xl font-sans text-center mb-4'>{categoryData.name}</p>
-      <div className="w-full mx-auto min-h-screen flex flex-row flex-wrap">
+      <div className="w-full flex flex-row flex-wrap">
         
         {
         isLoadingArticles ? (
@@ -45,7 +42,6 @@ export default function CategoryPage({ title }) {
             return <Card key={article.id} article={article}/> // Return the article title
           })
         )}
-        {/* preciso fazer os cards das noticias */}
       </div>
     </div>
     

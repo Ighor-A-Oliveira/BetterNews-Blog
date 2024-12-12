@@ -9,12 +9,10 @@ export function  useFetch(url){
 
     useEffect(() => {
         if (!url) return;
-        /* setTimeout(() => { */
           /* Axios parses the data to json by default */
           axios.get(url) // Make sure the URL is correct
-            /* fires a function onde the promise has been answered */
+            /* fires a function once the promise has been answered */
             .then((response) => {
-              //console.log(response.data)
               setData(response.data);
               setLoading(false); // Set loading to false after data is fetched
           })
@@ -23,7 +21,6 @@ export function  useFetch(url){
             setError("Failed to fetch users."); // Set error message
             setLoading(false); // Stop loading
           });
-        /* }, 1500) */
 
         
     
