@@ -31,11 +31,11 @@ export default function HambNav() {
         <AnimatedHamburguerButton active={active} dispatch={dispatch}/>
         <div className={`absolute lg:hidden top-[85px] left-0 right-0 w-full z-50 bg-gray-500 transition-all duration-300 ease-out ${isHambActive}`}>
             {active && (
-                <div className="flex flex-col h-full w-full">
+                <div className="flex flex-col h-full w-full items-center">
                     {Array.isArray(categories) && categories.map((category, index) => {
                         return(<Link 
                                   to={category.name.toLowerCase()} 
-                                  className='mb-4 text=white font-sans text-2xl' 
+                                  className='mb-4 text-white font-sans text-2xl md:text-4xl' 
                                   key={index} onClick={() => dispatch({ type: "IS_ACTIVE", payload: active})}
                                 >
                                   {category.name}
