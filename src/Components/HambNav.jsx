@@ -1,13 +1,14 @@
 import { MotionConfig, motion } from "framer-motion"
-import { useEffect, useState } from "react"
+import { useEffect} from "react"
 import { Link } from "react-router-dom";
 import { useGeneral } from "../Contexts/GeneralContext";
 
 
 export default function HambNav() {
-    const [active, setActive] = useState(false)
+    
+    const { state, dispatch } = useGeneral();
+    const active = state.isActive
     const isHambActive = active ? 'h-[100vh] p-4' : 'h-[0px] p-0'
-    const { state } = useGeneral();
     const categories = state.categories || [];
     console.log(categories)
 
@@ -27,12 +28,18 @@ export default function HambNav() {
 
   return (
     <>
-        <AnimatedHamburguerButton active={active} setActive={setActive}/>
-        <div className={`absolute lg:hidden top-[85px] left-0 right-0 w-full h-full z-50 bg-red-400 transition-all duration-300 ease-out ${isHambActive}`}>
+        <AnimatedHamburguerButton active={active} dispatch={dispatch}/>
+        <div className={`absolute lg:hidden top-[85px] left-0 right-0 w-full z-50 bg-gray-500 transition-all duration-300 ease-out ${isHambActive}`}>
             {active && (
                 <div className="flex flex-col h-full w-full">
                     {Array.isArray(categories) && categories.map((category, index) => {
-                        return(<Link to={category.name.toLowerCase()} className='mb-2 text=white' key={index} onClick={() => setActive(!active)}>{category.name}</Link>)
+                        return(<Link 
+                                  to={category.name.toLowerCase()} 
+                                  className='mb-4 text=white font-sans text-2xl' 
+                                  key={index} onClick={() => dispatch({ type: "IS_ACTIVE", payload: active})}
+                                >
+                                  {category.name}
+                                </Link>)
                     })}
                 </div>
             )}
@@ -42,12 +49,12 @@ export default function HambNav() {
 }
 
 // eslint-disable-next-line react/prop-types
-function AnimatedHamburguerButton({active, setActive}) {
+function AnimatedHamburguerButton({active, dispatch}) {
     
     return(
       /* framer motion context provider, it applies all framer motion configs to the motion items inside of it */
       <MotionConfig className='absolute my-auto' transition={{duration: 0.5, ease: 'easeInOut'}}>
-        <motion.button className="relative h-[50px] w-[50px] rounded-full bg-white/0 block lg:hidden" onClick={() => setActive(!active)}
+        <motion.button className="relative h-[50px] w-[50px] rounded-full bg-white/0 block lg:hidden" onClick={() => dispatch({ type: "IS_ACTIVE", payload: active})}
           animate={active ? "open" : "closed"}
           initial={false}
         >
@@ -78,7 +85,7 @@ function AnimatedHamburguerButton({active, setActive}) {
           />
           <motion.span 
             className="absolute h-1 w-5 bg-white"
-            style={{bottom: "40%", left:"0", x:"-99%", y:"50%"}}
+            style={{bottom: "40%", left:"0", x:"-99%", y:"35%"}}
             variants={{open: {
               rotate: ['0deg', '0deg', '45deg'],
               bottom: ["35%", "50%", "50%"],

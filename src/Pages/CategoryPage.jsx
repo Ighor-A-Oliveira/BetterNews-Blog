@@ -31,7 +31,7 @@ export default function CategoryPage({ title }) {
   console.log(articles);
 
   return (
-    <div className='flex flex-col items-center w-full md:w-[80%] lg:w-[60%]'>
+    <div className='flex flex-col items-center w-full md:w-[80%] lg:w-[60%] pt-20 lg:pt-0'>
       <p className='text-4xl font-sans text-center mb-4'>{categoryData.name}</p>
       <div className="w-full mx-auto min-h-screen flex flex-row flex-wrap">
         

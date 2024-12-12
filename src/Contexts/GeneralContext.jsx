@@ -14,6 +14,7 @@ export default function GeneralProvider({children}) {
         darkMode: false,
         categories: [],
         articles: [],
+        isActive: false
     })
 
     //const value = {}

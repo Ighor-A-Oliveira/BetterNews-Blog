@@ -40,7 +40,7 @@ export default function ArticlePage() {
   const formattedDate = date.toLocaleDateString("pt-BR");
 
   return (
-    <div className="w-full md:w-[80%] lg:w-[65%] flex flex-col font-sans py-4 px-4 md:px-0">
+    <div className="w-full md:w-[80%] lg:w-[65%] flex flex-col font-sans py-20 lg:py-4 px-4 md:px-0">
       <p className="text-4xl md:text-6xl">{article.title}</p>
       <p className="text-md text-left mt-4">por <span className="font-bold">{authorData.name}</span> em {formattedDate}</p>
       <p className="text-xl my-4">{article.content}</p>
