@@ -28,26 +28,19 @@ function AppRoutes() {
         <Route path="/" element={<HomePage />} />
 
         {/* Roteamento das categorias */}
-        {categories.map((category, index) => (
-          <>
+        {categories.map((category) => (
           <Route
             key={category.id}
-            path={category.name.toLowerCase()}
+            path={`${category.name.toLowerCase()}/*`}
             element={<CategoryPage title={category.name} />}
-            
           />
-          <Route
-            key={index}
-            path={`${category.name.toLowerCase()}/artigo/:id`}
-            element={<ArticlePage />}
-          />
-          </>
         ))}
 
-          <Route
-            path={`/artigo/:id`}
-            element={<ArticlePage />}
-          />
+        {/* rota dinamica que lida com a url dos artigos e artigos de categoria especifica */}
+        <Route
+          path=":categoryName?/artigo/:id"
+          element={<ArticlePage />}
+        />
 
           
 
